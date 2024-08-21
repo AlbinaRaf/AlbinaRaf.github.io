@@ -1,0 +1,132 @@
+
+.page-main__promo {
+  position: relative;
+  width: 320px;
+  height: 389px;
+  margin: 0 auto;
+  background-image: url(/img/background/back-mobile-320w.jpg);
+  background-position:  center;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-color: hsl(203, 47%, 66%);
+
+  @media(min-width: @tablet-width) {
+    width: 768px;
+    height: 518px;
+    background-image: url(/img/background/back-tablet.jpg);
+  }
+  @media(min-width: @desktop-width) {
+      width: 1199px;
+     background-image: url(/img/background/back-desktop.jpg);
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url(/img/background/back-desktop.jpg);
+      background-size: 1538px auto;
+    }
+
+  }
+
+}
+
+.promo::before, .intro::before{
+  content: "";
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 57px;
+  background-image: url(/img/SVG/intro-triangle.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+
+}
+
+
+.promo__text-image{
+  width: 282px;
+  padding-top: 90px;
+  padding-bottom: 83px;
+  display: block;
+  margin: 0 auto;
+
+
+
+  @media(min-width: @tablet-width) {
+    width: 461px;
+    padding-top: 80px;
+    padding-bottom: 87px;
+
+  }
+  @media(min-width: @desktop-width) {
+    width: 459px;
+    padding-top: 78px;
+    padding-bottom: 92px;
+
+  }
+}
+
+.page-main__intro {
+  position: relative;
+  margin: 0 auto;
+  width: 320px;
+  height: 160px;
+  background-image: url(/img/background/back-mobile-intro.jpg);
+  background-position:  bottom;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-color: hsl(203, 47%, 66%);
+
+
+
+  @media(min-width: @tablet-width) {
+    width: 768px;
+    height: 288px;
+    background-image: url(/img/background/back-tablet-intro.jpg);
+
+  }
+  @media(min-width: @desktop-width) {
+    width: 1199px;
+    height: 300px;
+    background-image: url(/img/background/back-desktop-intro.jpg);
+
+
+    @media (min-resolution: 2dppx) {
+
+
+    background-image: url(/img/background/back-desktop-intro@2x.jpg);
+    background-size: 1538px auto;
+  }
+
+}
+}
+
+.intro__text-image {
+  padding-top: 52px;
+    padding-bottom: 69px;
+    display: block;
+    margin: 0 auto;
+    width: 229px;
+
+
+
+
+  @media(min-width: @tablet-width) {
+    width: 458px;
+
+    padding-top: 95px;
+    padding-bottom: 115px;
+
+  }
+  @media(min-width: @desktop-width) {
+    width: 461px;
+
+    padding-top: 100px;
+    padding-bottom: 120px;
+
+  }
+}

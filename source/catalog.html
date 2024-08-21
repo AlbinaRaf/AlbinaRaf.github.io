@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Фото и видео</title>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page__body">
+    <header class="page__header page-header edge-shadows">
+      <nav class="page-header__main-nav main-nav main-nav--closed">
+
+          <button class="main-nav__bar-toggler" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+
+
+       <ul class="main-nav__list site-menu">
+          <li class="site-menu__item ">
+            <a class="site-menu__link" href="index.html">ГЛАВНАЯ</a>
+          </li>
+          <li class="site-menu__item site-menu__item--active">
+            <a class="site-menu__link" href="#">ФОТО И ВИДЕО</a>
+          </li>
+          <li class="site-menu__item site-menu__item--spacer"></li>
+            <li class="site-menu__item">
+              <a class="site-menu__link" href="form.html">ФОРМА ОТЗЫВА</a>
+          </li>
+          <li class="site-menu__item">
+              <a class="site-menu__link" href="#">HTML ACADEMY</a>
+          </li>
+        </ul>
+
+      </nav>
+      <a class="page-header__logo" href="#">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/icons/logotype-desktop.svg">
+          <source media="(min-width: 780px)" srcset="img/icons/logotype-tablet.svg">
+        <img class="page-header__logo-image" src="img/icons/logotype-mobile.svg" width="102" height="84" alt="Logotype" >
+      </picture>
+      </a>
+
+    </header>
+    <main class="page__main page-main">
+      <section class="page-main__intro intro">
+
+        <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
+
+          <img class="intro__text-image" src="img/SVG/text-sedona.svg" alt="промо текст" width="280" height="213">
+
+
+      </section>
+
+      <header class="page-main__slogan slogan">
+        <div class="slogan__catalog slogan-catalog">
+          <h2 class="slogan-catalog__title">
+            Фото и видео
+          </h2>
+          <p class="slogan-catalog__description">
+            Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
+          </p>
+        </div>
+      </header>
+
+      <section class="gallery">
+
+        <ul class="gallery__card card">
+          <li class="card__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/catalog/photo-1-desktop.jpg 1x, img/catalog/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/photo-1-tablet.jpg 1x, img/catalog/photo-1-tablet@2x.jpg 2x">
+
+            <img src="img/catalog/photo-1-mobile.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Дорога и закат" class="card__img">
+          </picture>
+            <h3 class="card__title">неродные просторы </h3>
+            <cite class="card__autor">Автор фото: Борис</cite>
+            <p class="card__like">
+              <span class="visually-hidden">Like</span>
+            </p>
+            <p class="card__rate">1350</p>
+
+          </li>
+          <li class="card__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/catalog/photo-2-desktop.jpg 1x, img/catalog/photo-2-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/photo-2-tablet.jpg 1x, img/catalog/photo-2-tablet@2x.jpg 2x">
+            <img src="img/catalog/photo-2-mobile.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg 2x" alt="Фото растени на фоне гор" class="card__img">
+            </picture>
+            <h3 class="card__title">Местная растительность</h3>
+            <cite class="card__autor">Автор фото: Сергей</cite>
+            <p class="card__like">
+              <span class="visually-hidden">Like</span>
+            </p>
+            <p class="card__rate">143</p>
+
+          </li>
+          <li class="card__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/catalog/photo-3-desktop.jpg 1x, img/catalog/photo-3-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/photo-3-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
+            <img src="img/catalog/photo-3-mobile.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg 2x" alt="Дорога среди деревьев" class="card__img">
+            </picture>
+            <h3 class="card__title">Дорога на север</h3>
+            <cite class="card__autor">Автор фото: Петр</cite>
+            <p class="card__like">
+              <span class="visually-hidden">Like</span>
+            </p>
+            <p class="card__rate">96</p>
+
+          </li>
+          <li class="card__item">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/catalog/photo-4-desktop.jpg 1x, img/catalog/photo-4-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/catalog/photo-4-tablet.jpg 1x, img/catalog/photo-3-tablet@2x.jpg 2x">
+            <img src="img/catalog/photo-4-mobile.jpg" srcset="img/catalog/photo-4-tablet@2x.jpg 2x" alt="Мост дьявола" class="card__img">
+            </picture>
+            <h3 class="card__title">Мост дьявола</h3>
+            <cite class="card__autor">Автор фото: Антон</cite>
+            <p class="card__like">
+              <span class="visually-hidden">Like</span>
+            </p>
+            <p class="card__rate">254</p>
+
+          </li>
+        </ul>
+
+      </section>
+      <section class="video">
+        <h2 class="video__title">Все еще сомневаетесь?</h2>
+        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <video src="#">Ролик про Седону</video>
+      </section>
+    </main>
+
+    <footer class="page__footer page-footer">
+      <a class="page-footer__link link" href="#">
+        #visitSEDONA
+      </a>
+
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <span class="visually-hidden">Youtube</span>
+            </a>
+          </li>
+        </ul>
+        <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+          <img class="developer__image" src="./img/htmlacademy.svg" width="27" height="34" alt="" aria-hidden="true">
+        </a>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
