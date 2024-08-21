@@ -1,0 +1,90 @@
+.pop-up {
+  position: fixed;
+  margin-top: 117px;
+  background-color: #ffffff;
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+}
+
+.pop-up__opened {
+  display: block;
+}
+
+.pop-up__closed {
+  display: none;
+}
+
+.pop-up__wrapper {
+  width: 100%;
+  padding-top: 35px;
+}
+
+.pop-up__error {
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width){
+    width: 400px;
+  }
+}
+
+.pop-up__success {
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+}
+
+.pop-up__title {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.pop-up__text {
+  width: 70%;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.pop-up__button-wrapper {
+  background-color: #f2f2f2;
+  width: 100%;
+  padding: 20px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 40px 0;
+  }
+}
+
+.pop-up__button {
+  background-color: #0000ff;
+  color: #ffffff;
+  border: none;
+  height: 58px;
+  font-size: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.pop-up__button:hover {
+  background-color: darken(#0000ff, 20%);
+}
+
+.pop-up__button:active {
+  background-color: darken(#0000ff, 30%);
+  color: fade(#ffffff, 30%);
+}
+
+.pop-up__button:disabled {
+  background-color: #808080;
+}
+
+.pop-up__button-error {
+  width: 180px;
+}
+
+.pop-up__button-success {
+  width: 280px;
+}

@@ -123,7 +123,7 @@
                 </label>
                 <div class="recall-form__contacts-input">
                   <input type="tel" id="tel" name="tel" placeholder="Введите телефон" aria-label="Контактный телефон"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    pattern="8[0-9]{10}" required>
                   <div class="recall-form__input-btn">
                     <svg class="recall-form__input-btn-icon" width="18" height="18">
                       <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
@@ -268,6 +268,25 @@
           </div>
         </div>
       </footer>
+
+      <section class="pop-up">
+        <div class="pop-up__error pop-up__wrapper pop-up__closed">
+          <h2 class="pop-up__title">Что-то пошло не так!</h2>
+          <p class="pop-up__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+
+          <button class="pop-up__button pop-up__button-error" type="button">Ок</button>
+        </div>
+
+        <div class="pop-up__success pop-up__wrapper pop-up__closed">
+          <h2 class="pop-up__title">Ваш отзыв отправлен!</h2>
+          <p class="pop-up__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем
+            его на сайте.</p>
+
+          <div class="pop-up__button-wrapper">
+            <button class="pop-up__button pop-up__button-success" type="button">Закрыть окно</button>
+          </div>
+        </div>
+      </section>
     <script src="js/script.min.js"></script>
     </body>
   </html>
