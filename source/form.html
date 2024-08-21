@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Форма отзыва</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
+    <svg style="display: none">
+        <symbol id="icon-mail" viewBox="0 0 16 16">
+      <path
+        d="M8 10c-.266 0-.5-.094-1-.336L0 6v7c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V6L9 9.664c-.5.242-.734.336-1 .336zm7-8H1c-.55 0-1 .45-1 1v.758l8 4.205 8-4.205V3c0-.55-.45-1-1-1z" />
+    </symbol>
+    <symbol id="icon-phone" viewBox="0 0 18 18">
+      <path fill="#010101"
+        d="M3.6 7.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.699-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V17c0 .6-.4 1-1 1C7.6 18 0 10.4 0 1c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1L3.6 7.8z" />
+    </symbol>
+      <symbol id="ico-twitter"  viewBox="0 0 17 14" fill="none" >
+
+        <path d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
+
+      </symbol>
+
+      <symbol id="ico-facebook"  viewBox="0 0 9 19" fill="none">
+
+        <path d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6h3C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" fill="white"/>
+
+      </symbol>
+
+      <symbol id="ico-youtube" viewBox="0 0 20 14" fill="none">
+
+        <path d="M17.1 0h3.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
+
+      </symbol>
+
+      <symbol id="logo-academy" viewBox="0 0 25 35"  fill="black" >
+
+        <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z"/>
+
+      </symbol>
+    </svg>
     <header class="page__header page-header">
       <nav class="page-header__main-nav main-nav main-nav--closed">
 
@@ -61,143 +94,180 @@
       </header>
 
       <section class="page-main__form form">
-        <form class="form__body" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form__group field-group name">
-            <legend class="form__title">Представьтесь:</legend>
 
-            <ul class="field-group__list">
-              <li class="field-group__item">
-                <label class="field">
-                  <span class="field__lead">ИМЯ:*</span>
-                  <input class="field__input" type="text" name="your-name" placeholder="Петр" required>
+        <form class="recall-form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="recall-form__section  recall-form__section--id">
+            <h3 class="recall-form__title">Представьтесь:</h3>
+            <ul class="recall-form__id">
+              <li class="recall-form__id-item">
+                <label class="recall-form__id-label" for="name">Имя*:</label>
+                <input type="text" id="name" name="name" placeholder="Петр">
+              </li>
+              <li class="recall-form__id-item">
+                <label class="recall-form__id-label" for="surname">Фамилия*:</label>
+                <input type="text" id="surname" name="surname" placeholder="Иванов">
+              </li>
+              <li class="recall-form__id-item">
+                <label class="recall-form__id-label" for="middlename">Отчество:</label>
+                <input type="text" id="middlename" name="middlename" placeholder="Александрович">
+              </li>
+            </ul>
+          </div>
+
+          <div class="recall-form__section  recall-form__section--contacts">
+            <h3 class="recall-form__title recall-form__title--highlight">Контактная информация:</h3>
+            <ul class="recall-form__contacts">
+              <li class="recall-form__contacts-item">
+                <label class="recall-form__contacts-label" for="tel">
+                  <span class="hidden-desktop">Контактный</span> телефон*:
+                </label>
+                <div class="recall-form__contacts-input">
+                  <input type="tel" id="tel" name="tel" placeholder="Введите телефон" aria-label="Контактный телефон"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                  <div class="recall-form__input-btn">
+                    <svg class="recall-form__input-btn-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+
+              <li class="recall-form__contacts-item">
+                <label class="recall-form__contacts-label" for="email">Электронная почта*:</label>
+                <div class="recall-form__contacts-input">
+                  <input type="email" id="email" name="email" placeholder="Введите e-mail" aria-label="Электронная почта"
+                    required>
+                  <div class="recall-form__input-btn  recall-form__input-btn--mail">
+                    <svg class="recall-form__input-btn-icon" width="18" height="18">
+                      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-mail"></use>
+                    </svg>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="recall-form__section  recall-form__section--interview">
+            <h3 class="recall-form__title">Ваше общее впечатление:</h3>
+            <ul class="recall-form__interview">
+              <li class="recall-form__interview-item">
+                <input class="recall-form__radio-input visually-hidden" type="radio" name="rg" value="positive"
+                  id="positive" checked>
+                <label class="recall-form__radio-control" for="positive">
+                  Скорее положительное
                 </label>
               </li>
-              <li class="field-group__item">
-                <label class="field">
-                  <span class="field__lead">ФАМИЛИЯ*:</span>
-                  <input class="field__input" type="text" name="your-name" placeholder="Иванов" required>
+              <li class="recall-form__interview-item">
+                <input class="recall-form__radio-input visually-hidden" type="radio" name="rg" value="negative"
+                  id="negative">
+                <label class="recall-form__radio-control" for="negative">
+                  Скорее отрицательное
                 </label>
               </li>
-              <li class="field-group__item">
-                <label class="field">
-                  <span class="field__lead">Отчество:</span>
-                  <input class="field__input" type="text" name="your-name" placeholder="Александрович">
+              <li class="recall-form__interview-item">
+                <input class="recall-form__radio-input visually-hidden" type="radio" name="rg" value="hard" id="hard">
+                <label class="recall-form__radio-control" for="hard">
+                  Затрудняюсь ответить
                 </label>
               </li>
             </ul>
-          </fieldset>
+          </div>
 
-          <fieldset class="form__group field-group contacts">
-            <legend class="form__title">Контактная информация:</legend>
-
-            <ul class="field-group__list">
-              <li class="field-group__item">
-                <label class="field">
-                  <span class="field__lead">Контактный телефон*:</span>
-                  <input class="field__input" type="tel" name="phone" placeholder="Введите телефон">
+          <div class="recall-form__section  recall-form__section--visited">
+            <h3 class="recall-form__title  recall-form__title--visited">Посещенные достопримечательности:</h3>
+            <ul class="recall-form__visited">
+              <li class="recall-form__visited-item recall-form__visited-item--bridge">
+                <input class="visually-hidden recall-form__checkbox-input" type="checkbox" name="devils-bridge"
+                  id="devils-bridge" checked>
+                <label class="recall-form__checkbox-control" for="devils-bridge">
+                  Мост Дьявола
                 </label>
               </li>
-              <li class="field-group__item">
-                <label class="field">
-                  <span class="field__lead">Электронная почта*:</span>
-                  <input class="field__input" type="email" name="e-mail" placeholder="Введите e-mail" required>
+              <li class="recall-form__visited-item recall-form__visited-item--mountain">
+                <input class="visually-hidden recall-form__checkbox-input" type="checkbox" name="mountain-bell"
+                  id="mountain-bell" checked>
+                <label class="recall-form__checkbox-control" for="mountain-bell">
+                  Гора-Колокол
                 </label>
               </li>
-
-            </ul>
-          </fieldset>
-          <fieldset class="form__group field-group impression">
-            <legend class="form__title">ВАше Общее впечатление:</legend>
-
-            <ul class="field-group__list">
-              <li class="field-group__item">
-                <label class="control control--radio">
-                  <input class="control__input" type="radio" name="target" value="positiv" checked>
-                  <span class="control__lead">Скорее положительное</span>
+              <li class="recall-form__visited-item recall-form__visited-item--park">
+                <input class="visually-hidden recall-form__checkbox-input" type="checkbox" name="slide-park"
+                  id="slide-park" checked>
+                <label class="recall-form__checkbox-control" for="slide-park">
+                  Слайд-парк
                 </label>
               </li>
-              <li class="field-group__item">
-                <label class="control control--radio">
-                  <input class="control__input" type="radio" name="target" value="negativ">
-                  <span class="control__lead">Скорее отрицательное</span>
-                </label>
-              </li>
-              <li class="field-group__item">
-                <label class="control control--radio">
-                  <input class="control__input" type="radio" name="target" value="difficult">
-                  <span class="control__lead">Затрудняюсь ответить</span>
+              <li class="recall-form__visited-item recall-form__visited-item--red">
+                <input class="visually-hidden recall-form__checkbox-input" type="checkbox" name="red-rocks"
+                  id="red-rocks">
+                <label class="recall-form__checkbox-control" for="red-rocks">
+                  Красные скалы
                 </label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form__group field-group
-          attractions">
-            <legend class="form__title">посещенные достопримечательности:</legend>
+          </div>
 
-            <ul class="field-group__list">
-              <li class="field-group__item">
-                <label class="control control--checkbox">
-                  <input class="control__input" type="checkbox" name="additional" value="brige" checked>
-                  <span class="control__lead">Мост Дьявола</span>
-                </label>
-              </li>
-              <li class="field-group__item">
-                <label class="control control--checkbox">
-                  <input class="control__input" type="checkbox" name="additional" value="bell-mountain" checked>
-                  <span class="control__lead">Гора-Колокол</span>
-                </label>
-              </li>
-              <li class="field-group__item">
-                <label class="control control--checkbox">
-                  <input class="control__input" type="checkbox" name="additional" value="slide-park" checked>
-                  <span class="control__lead">Слайд-парк</span>
-                </label>
-              </li>
-              <li class="field-group__item">
-                <label class="control control--checkbox">
-                  <input class="control__input" type="checkbox" name="additional" value="red-rocks">
-                  <span class="control__lead">Красные скалы</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <div class="form__group field-group emotions">
-            <label class="field-group__heading form__title" for="comment">Опишите свои эмоции:</label>
-            <div class="field">
-              <textarea class="field__input" name="comment" id="comment" rows="5" placeholder="Опишите подробно все свои восторги "></textarea>
+          <div class="recall-form__section  recall-form__section--message">
+            <h3 class="recall-form__title  recall-form__title--highlight">Опишите свои эмоции:</h3>
+            <div class="recall-form__message-wrap">
+              <textarea class="recall-form__message-input" id="message" name="message"
+                placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
           </div>
-          <button class="form__button button" type="submit">ОТПРАВИТЬ ОТЗЫВ</button>
-          <span class="form_required">* — обязательные поля</span>
+
+          <div class="recall-form__bottom-wrap">
+            <span class="recall-form__wrap-message">* ‒ Обязательные поля</span>
+            <button class="recall-form__btn button" type="submit" value="Отправить отзыв">ОТПРАВИТЬ ОТЗЫВ</button>
+          </div>
         </form>
       </section>
       </main>
-      <footer class="page__footer page-footer">
-        <a class="page-footer__link link" href="#">
-          #visitSEDONA
-        </a>
 
-          <ul class="page-footer__social social">
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <span class="visually-hidden">Twitter</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <span class="visually-hidden">Facebook</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link" href="#">
-                <span class="visually-hidden">Youtube</span>
-              </a>
-            </li>
-          </ul>
-          <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-            <img class="developer__image" src="./img/htmlacademy.svg" width="27" height="34" alt="" aria-hidden="true">
-          </a>
-    </footer>
-    <script src="js/script.js"></script>
+      <footer class="footer">
+        <div class="footer__wrapper">
+          <div class="footer__contacts contacts">
+
+            <a class="contacts__link" href="#">#visitsedona</a>
+          </div>
+          <div class="footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link " href="#">
+
+                  <span class="visually-hidden">Мы в Twitter</span>
+                  <svg width="17" height="14" viewBox="0 0 17 14">
+                    <use xlink:href="#ico-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg width="9" height="19" viewBox="0 0 9 19">
+                    <use xlink:href="#ico-facebook"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы в Facebook</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">
+                  <svg width="20" height="14" viewBox="0 0 20 14">
+                    <use xlink:href="#ico-youtube"></use>
+                  </svg>
+                  <span class="visually-hidden">Мы в Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
+              <svg width="27" height="35">
+                <use xlink:href="#logo-academy"></use>
+              </svg>
+              <span class="visually-hidden">HTML Academy</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    <script src="js/script.min.js"></script>
     </body>
   </html>

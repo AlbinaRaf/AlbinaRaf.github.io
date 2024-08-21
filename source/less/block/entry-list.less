@@ -4,7 +4,7 @@
   margin: 0;
   list-style-type: none;
   background-color: #ffffff;
-  padding-top: 35px;
+
 
   @media(min-width: @tablet-width) {
     display: flex;
@@ -21,7 +21,7 @@
 
 .entry-list__item {
 
-  padding-bottom: 26px;
+
   padding-left: 69px;
 
   &:last-child {
@@ -30,7 +30,9 @@
   }
 
   @media (min-width: @tablet-width) {
+
       width: 256px;
+
       text-align: center;
       padding: 0;
       padding-top: 158px;
@@ -45,12 +47,22 @@
 
 
   .entry-list__title {
-
+    padding-top: 26px;
     padding-bottom: 20px;
     margin: 0;
     font-size: 21px;
     @media (min-width: @tablet-width) {
+      padding-top: 0;
+      padding-bottom: 30px;
 
+      }
+  }
+
+  .entry-list__item--housing .entry-list__title {
+    padding-top: 35px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 0;
       padding-bottom: 30px;
 
       }
@@ -106,14 +118,13 @@
 
   .entry-list__item--gifts  .entry-list__description {
 
-
     @media (min-width: @tablet-width)  {
       width: 193px;
     }
+
     @media (min-width: @desktop-width) {
 
       width: 240px;
-
 
       }
   }
@@ -126,6 +137,65 @@
     }
   }
 
+  .entry-list__item--housing {
+    display: block;
+    background-image: url("/img/SVG/icon-house.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 39px 37px;
+    background-position: 21px 26px;
+
+    @media (min-width: @tablet-width)  {
+      background-size: 75px 72px;
+      background-position: top 60px left 90px;
+    }
+    @media (min-width: @desktop-width) {
+
+      background-size: 74px 72px;
+      background-position: top 59px left 161px;
+
+      }
+
+  }
+
+  .entry-list__item--food {
+    display: block;
+    background-image: url("/img/SVG/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 40px 34px;
+    background-position: 18px 21px;
+
+    @media (min-width: @tablet-width)  {
+      background-size: 76px 67px;
+      background-position: top 63px left 90px;
+    }
+    @media (min-width: @desktop-width) {
+      background-size: 76px 68px;
+      background-position: top 63px left 161px;
+
+      }
+  }
+
+  .entry-list__item--gifts {
+    display: block;
+    background-image: url("/img/SVG/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 32px 38px;
+    background-position: 18px 15px;
+
+    @media (min-width: @tablet-width)  {
+      background-size: 64px 75px;
+      background-position: top 57px left 93px;
+
+    }
+    @media (min-width: @desktop-width) {
+      background-size: 63px 75px;
+      background-position: top 57px left 165px;
+
+      }
+  }
 
 
 
